@@ -11,6 +11,7 @@ import torch
 import argparse
 import nni
 import logging
+from nni.nas.pytorch.classic_nas.mutator import get_and_apply_next_architecture
 logger = logging.getLogger('EGG')
 
 
@@ -110,6 +111,11 @@ def main():
         net = DeepConvNet(ACTIVATION)
     else:
         net = EEGNet(ACTIVATION)
+
+#-------------for classic NAS algorithm-----------
+
+    get_and_apply_next_architecture(net)
+
 
     print(net)
     if torch.cuda.is_available():

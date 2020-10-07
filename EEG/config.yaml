@@ -2,7 +2,7 @@ authorName: superorange
 experimentName: cough-pytorch
 trialConcurrency: 1
 maxExecDuration: 2d
-maxTrialNum: 50
+maxTrialNum: 20
 #choice: local, remote, pai
 trainingServicePlatform: local
 searchSpacePath: search_space.json
@@ -16,7 +16,7 @@ tuner:
 #            #choice: maximize, minimize
     optimize_mode: maximize
 trial:
-  command: python EGG_main.py
+  command: python EGG_main.py -m EEG -a ReLU
   codeDir: .
   gpuNum: 0
 #

@@ -1,0 +1,10 @@
+{
+	
+	"first_conv": {
+    "_type": "layer_choice",
+    "_value": [
+      "conv51",
+      "conv25"
+    ]
+  }
+}
